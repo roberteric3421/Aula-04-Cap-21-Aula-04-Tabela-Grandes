@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,40 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         table {
-            width: 500px;
-            border-collapse: collapse ;
+            width: 1300px;
+            border-collapse: collapse;
             /* Obrigatório para ter o título da tabela fixo */
             position: relative;
         }
-        td, th {
+
+        td,
+        th {
             border: 1px solid black;
             padding: 10px;
         }
-        thead, tfoot {
+
+        thead,
+        tfoot {
             background-color: gray;
             color: white;
         }
 
-        thead > tr > th {
+        thead>tr>th {
             /* No título da linha do cabeçalho vou grudar "sticky" */
-            position: sticky; /* grudar */
-            top: 0; /* na posição 0 */
+            position: sticky;
+            /* grudar */
+            top: 0;
+            /* na posição 0 */
             background-color: gray;
 
         }
+
         td.num {
             text-align: right;
         }
+
         caption {
             /* Tamanho da fonte */
             font-size: 1.5em;
@@ -44,6 +54,7 @@
             background-color: lightgray;
 
         }
+
         /* Efeito Zebra
             tdoby > tr - Todo tr que é filho do tdoby
             pseudo-classe tr:nth-child(2n) - Todo filho atualizando no intervalo de 2 linhas.
@@ -62,28 +73,19 @@
             tbody > tr:nth-child(even) {
                 background-color: yellow;
             }
-        */
+       
         tbody > tr:nth-child(2n) {
             background-color: gray;
 
-        }
+        } */
     </style>
+
 </head>
+
 <body>
-    <h1>Uso de tabelas grandes</h1>
-    <!-- Anatomia para tabelas grandes 
-        Table
-            Caption - Legenda da tabela
-            Thead - cabeça
-                TR, TD, TH
-            Tbody - corpo
-                TR, TD, TH
-            Tfoot - pé 
-                TR, TD, TH
-    -->
     <table>
         <caption>
-           <strong>População dos Estados Brasileiros - 2024</strong> 
+            <strong>População dos Estados Brasileiros - 2024</strong>
         </caption>
         <thead>
             <tr>
@@ -134,17 +136,85 @@
                 <td class="num">3.098.883</td>
                 <td><strong>'texto em negrito'</strong></td>
             </tr>
-            
+            <tr>
+                <td><q>Espírito Santo</q></td>
+                <td class="num">4.108.508</td>
+                <td><q>Citação curta</q></td>
+            </tr>
+            <tr>
+                <td>
+                    <blockquote><strong>Goiás</strong></blockquote>
+                </td>
+                <td class="num">7.206.508</td>
+                <td>
+                    <blockquote><strong>'citação forte'</strong></blockquote>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>Maranhão</code>
+                </td>
+                <td class="num">6.775.805</td>
+                <td><code>'texto monoespaçado'</code></td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.658.813</td>
+                <td>'Texto pré-formatado</td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>Paraíba</pre>
+                    < /td>
+                <td class="num">4.059.905</td>
+                <td>'texto pequeno'</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.281.480</td>
+                <td>'Texto subscrito'</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16.054.524</td>
+                <td>'Citação em bloco'</td>
+            </tr>
+            <tr>
+                <td><strong>Rio Grande do Sul</strong></td>
+                <td class="num">10.882.965</td>
+                <td><strong>'Negrito'</strong></td>
+            </tr>
+            <tr>
+                <td><em>Rondônia</em></td>
+                <td class="num">1.616.379</td>
+                <td><em>'Itálico'</em></td>
+            </tr>
+            <tr>
+                <td>
+                    <mark>Roraima</mark>
+                </td>
+                <td class="num"></td>
+                <td>
+                    <mark>'Texto destacado</mark>
+                </td>
+            </tr>
+            <tr>
+                <td><abbr title="Tocantins">TO</abbr></td>
+                <td class="num">1.607.369</td>
+                <td><abbr>'Abreviação'</abbr></td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th scope="row">Total de Habitantes</th>
-                <td class="num"><strong>122.420.654</strong></td>
+                <th scope="row">Total da população estimada:</th>
+                <td class="num"><strong>soma total</strong></td>
+                <td class="num">realizar soma das colunas</td>
             </tr>
 
         </tfoot>
 
     </table>
-        
+
 </body>
+
 </html>
